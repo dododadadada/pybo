@@ -25,4 +25,5 @@ urlpatterns = [
     path('', views.index, name='index'),  # '/' 에 해당되는 path
     path('program/', include('program.urls')),
     path('facility/', include('facility.urls')),
+    path('circle/', include('circle.urls')),
 ]
