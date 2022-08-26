@@ -35,17 +35,10 @@ def downloadCircle(request):
     </html>
     ''')
 
-def showCirclelist(request):
-    page = request.GET.get('page', '1')  # 페이지
-    circle_list = Circle.objects.order_by('name')
-    paginator = Paginator(circle_list, 10)  # 페이지당 10개씩 보여주기
-    page_obj = paginator.get_page(page)
-    context = {'circle_list': page_obj}
-    return render(request, 'circlelist/circle_list.html', context) # 객체 있으면 세번째 parameter: context
 
 def detail(request, circle_id):
     circle = get_object_or_404(Circle, pk=circle_id)
-    context = {'circlelist': circle}
+    context = {'circle': circle}
     return render(request, 'circlelist/circle_detail.html', context)
 
 def circle_search(request):

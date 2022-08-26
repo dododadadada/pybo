@@ -32,7 +32,7 @@
             {% for circle in circle_list %}
             <tr class="text-center">
                 <td class="text-start">
-                    <a href="{% url 'circlelist:detail' circle.id %}">{{ circle.name }}</a>
+                    <a href="{% url 'circlelist:detail' circle_id %}">{{ circle.name }}</a>
                 </td>
                 <td>{{ circle.tag }}</td>
                 <td>{{ circle.category }}</td>
