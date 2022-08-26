@@ -13,15 +13,6 @@
     }
 {% endblock %}
 {% block content %}
-<div class="row my-100">
-        <div class="container">
-            <a href="{% url 'circle:' %}" class="btn btn-primary" >새 글 등록하기</a>
-            <a href="{% url 'circle:gwangjang' %}" class="btn btn-success">전체 프로그램</a>
-            <a href="{% url 'circle:proposal' %}" class="btn btn-secondary">KU 동아리 프로그램 신청만 보기</a>
-            <a href="{% url 'circle:autonomy_program' %}" class="btn btn-secondary">자율 동아리 모집만 보기</a>
-        </div>
-    <br>
-    <br>
 
     <div class="table-title">
         <h3>전체 동아리 목록</h3>
@@ -41,7 +32,7 @@
             {% for circle in circle_list %}
             <tr class="text-center">
                 <td class="text-start">
-                    <a href="{% url 'circle:detail' circle.id %}">{{ circle.name }}</a>
+                    <a href="{% url 'circlelist:detail' circle.id %}">{{ circle.name }}</a>
                 </td>
                 <td>{{ circle.tag }}</td>
                 <td>{{ circle.category }}</td>

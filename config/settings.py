@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'common.apps.CommonConfig',
     'pybo.apps.PyboConfig',
     'manam.apps.ManamConfig',
-    'circle.apps.CircleConfig',
+    'circlelist.apps.CirclelistConfig',
     'program.apps.ProgramConfig',
     'facility.apps.FacilityConfig',
     'django.contrib.admin',

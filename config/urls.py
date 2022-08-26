@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from manam import views
+from circlelist import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,5 @@ urlpatterns = [
     path('', views.index, name='index'),  # '/' 에 해당되는 path
     path('program/', include('program.urls')),
     path('facility/', include('facility.urls')),
-    path('circle/', include('circle.urls')),
+    path('circlelist/', include('circlelist.urls')),
 ]
