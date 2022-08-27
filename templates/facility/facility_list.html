@@ -11,13 +11,13 @@
 {% block content %}
 <div class="container my-3">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background-color: #982323">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background-color: #982323;location:relative;left:-50px;">
         <div class="sidebar-sticky pt-3">
           <ul class="nav flex-column">
             <table class = 'table' style="background-color: #000000; color: ##691414">
               <br>
               <thead>
-                  <h5 style="color:#ebc291">시설 찾기</h5>
+                  <h5 style="color:white">시설 찾기</h5>
               </thead>
               <br>
               <tbody>
@@ -26,127 +26,198 @@
                   <!--검색기능-->
                   <input class="form-control" type="text" placeholder="시설 검색" aria-label="Search" name="b" value="{{b}}">
                   <br>
+                  <div style="color:white">
+                      조회된 시설 |
+                      {% if price == '0' %}
+                      전체
+                      {% elif price == '1' %}
+                      공공도서관
+                      {% elif price == '2' %}
+                      공공체육시설
+                      {% elif price == '3' %}
+                      공연장
+                      {% elif price == '4' %}
+                      교육기관
+                      {% elif price == '5' %}
+                      도서관
+                      {% elif price == '6' %}
+                      동주민센터
+                      {% elif price == '7' %}
+                      문화시설
+                      {% elif price == '8' %}
+                      문화예술회관
+                      {% elif price == '9' %}
+                      문화원
+                      {% elif price == '10' %}
+                      미술관
+                      {% elif price == '11' %}
+                      박물관/기념관
+                      {% elif price == '12' %}
+                      아동청소년지원센터
+                      {% elif price == '13' %}
+                      작은도서관
+                      {% elif price == '14' %}
+                      노인복지시설(경로당)
+                      {% elif price == '15' %}
+                      노인여가복지시설
+                      {% elif price == '16' %}
+                      노인요양공동생활가정
+                      {% elif price == '17' %}
+                      노인요양시설
+                      {% elif price == '18' %}
+                      노인주거복지시설
+                      {% elif price == '19' %}
+                      재가노인지원시설
+                      {% elif price == '20' %}
+                      재가노인주야간보호
+                      {% elif price == '21' %}
+                      방과후교실
+                      {% elif price == '22' %}
+                      지역아동센터
+                      {% elif price == '23' %}
+                      틈새돌봄기관
+                      {% elif price == '24' %}
+                      거주시설
+                      {% elif price == '25' %}
+                      공동생활가정
+                      {% elif price == '26' %}
+                      단기거주시설
+                      {% elif price == '27' %}
+                      복지관1
+                      {% elif price == '28' %}
+                      복지관2
+                      {% elif price == '29' %}
+                      지역사회재활시설
+                      {% elif price == '30' %}
+                      직업재활시설
+                      {% elif price == '31' %}
+                      기타
+                      {% elif price == '32' %}
+                      교육·문화시설 전체
+                      {% elif price == '33' %}
+                      노인시설 전체
+                      {% elif price == '34' %}
+                      보육·가족 및 여성시설 전체
+                      {% elif price == '35' %}
+                      사회복지일반시설 전체
+                      {% else %}
+                      전체
+                      {% endif %}
+                  </div>
                   <!--카테고리필터-->
-                  <label for="customRange3" style="color: #CDCDCD">카테고리</label>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio1" name="f", value="거주시설">
-                      <label class="form-radio-label" for="customRadio1" style="color: white">거주시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio2" name="f", value="공공도서관">
-                      <label class="form-radio-label" for="customRadio2" style="color: white">공공도서관</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio3" name="f", value="공공체육시설">
-                      <label class="form-radio-label" for="customRadio3" style="color: white">공공체육시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio4" name="f", value="공동생활가정">
-                      <label class="form-radio-label" for="customRadio4" style="color: white">공동생활가정</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio5" name="f", value="공연장">
-                      <label class="form-radio-label" for="customRadio5" style="color: white">공연장</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio6" name="f", value="교육기관">
-                      <label class="form-radio-label" for="customRadio6" style="color: white">교육기관</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio7" name="f", value="노인복지시설(경로당)">
-                      <label class="form-radio-label" for="customRadio7" style="color: white">노인복지시설(경로당)</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio8" name="f", value="노인여가복지시설">
-                      <label class="form-radio-label" for="customRadio8" style="color: white">노인여가복지시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio9" name="f", value="노인의료복지시설(노인요양공동생활가정)">
-                      <label class="form-radio-label" for="customRadio9" style="color: white">노인의료복지시설(노인요양공동생활가정)</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio10" name="f", value="노인의료복지시설(노인요양시설)">
-                      <label class="form-radio-label" for="customRadio10" style="color: white">노인의료복지시설(노인요양시설)</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio11" name="f", value="노인주거복지시설">
-                      <label class="form-radio-label" for="customRadio11" style="color: white">노인주거복지시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio12" name="f", value="단기거주시설">
-                      <label class="form-radio-label" for="customRadio12" style="color: white">단기거주시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio13" name="f", value="도서관">
-                      <label class="form-radio-label" for="customRadio13" style="color: white">도서관</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio14" name="f", value="동주민센터">
-                      <label class="form-radio-label" for="customRadio14" style="color: white">동주민센터</label>
+
+                  <div class="form-group">
+                    <a href = "#" onclick= "event.stopPropagation()"></a>
+                    <label for="customRange3" style="color:white">교육·문화</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select source="[name=price]">
+                      <option value="0">전체</option>
+                      <option value="32">교육·문화시설 전체</option>
+                      <option value="1">공공도서관</option>
+                      <option value="2">공공체육시설</option>
+                      <option value="3">공연장</option>
+                      <option value="4">교육기관</option>
+                      <option value="5">도서관</option>
+                      <option value="6">동주민센터</option>
+                      <option value="7">문화시설</option>
+                      <option value="8">문화예술회관</option>
+                      <option value="9">문화원</option>
+                      <option value="10">미술관</option>
+                      <option value="11">박물관/기념관</option>
+                      <option value="12">아동청소년지원센터</option>
+                      <option value="13">작은도서관</option>
+                      <option value="31">기타</option>
+
+                    </select>
+
+                    <label for="customRange3" style="color:white">노인</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select source="[name=price]">
+                      <option value="0">전체</option>
+                      <option value="33">노인시설 전체</option>
+                      <option value="14">노인복지시설(경로당)</option>
+                      <option value="15">노인여가복지시설</option>
+                      <option value="16">노인요양공동생활가정</option>
+                      <option value="17">노인요양시설</option>
+                      <option value="18">노인주거복지시설</option>
+                      <option value="19">재가노인지원시설</option>
+                      <option value="20">재가노인주야간보호</option>
+                    </select>
+
+                    <label for="customRange3" style="color:white">보육·가족 및 여성</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select source="[name=price]">
+                      <option value="0">전체</option>
+                      <option value="34">보육·가족및여성 전체</option>
+                      <option value="21">방과후교실</option>
+                      <option value="22">지역아동센터</option>
+                      <option value="23">틈새돌봄기관</option>
+                    </select>
+
+                    <label for="customRange3" style="color:white">사회복지일반</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select source="[name=price]">
+                      <option value="0">전체</option>
+                      <option value="35">사회복지일반시설 전체</option>
+                      <option value="24">거주시설</option>
+                      <option value="25">공동생활가정</option>
+                      <option value="26">단기거주시설</option>
+                      <option value="27">복지관1</option>
+                      <option value="28">복지관2</option>
+                      <option value="29">지역사회재활시설</option>
+                      <option value="30">직업재활시설</option>
+                    </select>
+                  <input type="range" class="custom-range" value = "0" min="0" max="35" step="1" id="customRange3" name="price", value={{ price }}>
+                  <script>
+                        ;(function(){
+
+                      function emit(target, name) {
+                        var event
+                        if (document.createEvent) {
+                          event = document.createEvent("HTMLEvents");
+                          event.initEvent(name, true, true);
+                        } else {
+                          event = document.createEventObject();
+                          event.eventType = name;
+                        }
+
+                        event.eventName = name;
+
+                        if (document.createEvent) {
+                          target.dispatchEvent(event);
+                        } else {
+                          target.fireEvent("on" + event.eventType, event);
+                        }
+                      }
+
+                      var outputsSelector = "input[type=number][source],select[source]";
+
+                      function onChange(e) {
+                        var outputs = document.querySelectorAll(outputsSelector)
+                        for (var index = 0; index < outputs.length; index++) {
+                          var item = outputs[index]
+                          var source = document.querySelector(item.getAttribute('source'));
+                          if (source) {
+                            if (item === e.target) {
+                              source.value = item.value
+                              emit(source, 'input')
+                              emit(source, 'change')
+                            }
+
+                            if (source === e.target) {
+                              item.value = source.value
+                            }
+                          }
+                        }
+                      }
+
+                      document.addEventListener('change', onChange)
+                      document.addEventListener('input', onChange)
+                    }());
+                    </script>
                   </div>
 
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio15" name="f", value="문화시설">
-                      <label class="form-radio-label" for="customRadio15" style="color: white">문화시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio16" name="f", value="문화예술회관">
-                      <label class="form-radio-label" for="customRadio16" style="color: white">문화예술회관</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio17" name="f", value="문화원">
-                      <label class="form-radio-label" for="customRadio17" style="color: white">문화원</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio18" name="f", value="미술관">
-                      <label class="form-radio-label" for="customRadio18" style="color: white">미술관</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio19" name="f", value="박물관/기념관">
-                      <label class="form-radio-label" for="customRadio19" style="color: white">박물관/기념관</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio20" name="f", value="방과후교실">
-                      <label class="form-radio-label" for="customRadio20" style="color: white">방과후교실</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio21" name="f", value="복지관1">
-                      <label class="form-radio-label" for="customRadio21" style="color: white">복지관1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio22" name="f", value="복지관2">
-                      <label class="form-radio-label" for="customRadio22" style="color: white">복지관2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio23" name="f", value="아동청소년지원센터">
-                      <label class="form-radio-label" for="customRadio23" style="color: white">아동청소년지원센터</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio24" name="f", value="재가노인복지시설(재가노인지원)">
-                      <label class="form-radio-label" for="customRadio24" style="color: white">재가노인복지시설(재가노인지원)</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio25" name="f", value="재가노인복지시설(주야간보호)">
-                      <label class="form-radio-label" for="customRadio25" style="color: white">재가노인복지시설(주야간보호)</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio26" name="f", value="지역사회재활시설">
-                      <label class="form-radio-label" for="customRadio26" style="color: white">지역사회재활시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio27" name="f", value="지역아동센터">
-                      <label class="form-radio-label" for="customRadio27" style="color: white">지역아동센터</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio28" name="f", value="직업재활시설">
-                      <label class="form-radio-label" for="customRadio28" style="color: white">직업재활시설</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-radio-input" type="radio" id="customRadio29" name="f", value="틈새돌봄기관">
-                      <label class="form-radio-label" for="customRadio29" style="color: white">틈새돌봄기관</label>
-                  </div>
-
-                  <button type='submit' class='btn btn-warning' style="background-color:#ebc291">검색</button>  <!--위에것과 기능은 같음-->
+                  <button type='submit' class='btn btn-warning' style="background-color:#ebc291;">검색</button>  <!--위에것과 기능은 같음-->
                   <!-- <button type='reset' class='btn btn-info'>RESET</button> -->
                 </form>
               </tbody>

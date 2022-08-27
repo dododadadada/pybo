@@ -58,7 +58,7 @@
     p {
     position:relative;
     left: 460px;
-    top: 10px;
+    top: -15px;
     }
     header {
       position: relative;
@@ -179,7 +179,7 @@
 </div>
 
 <div class="facilitylist"><a href="{% url 'facility:showFacilitylist' %}" style="position:relative;top:-530px;left:1070px;"> 전체시설목록 보러가기 </a></div>
-
+<div style="position:relative;top:-460px;left:390px;"> * 위치접근 허용을 해주시면 현재 내 위치 주변으로 지도가 이동합니다 :)</div>
 <p>
     <input type="checkbox" id="chkTraffic" onclick="setOverlayMapTypeId()" /> 교통정보 보기
     <input type="checkbox" id="chkBicycle" onclick="setOverlayMapTypeId()" /> 자전거도로 정보 보기
@@ -233,7 +233,7 @@
                                 '    <div class="info">' +
                                 '        <div class="title">' +
                                             place.name +
-                                '            <div id="closed" class="close" title="닫기"></div>' +
+                                '            <div class="close" onclick= "closeOverlay()" title="닫기"></div> '+
                                 '        </div>' +
                                 '        <div class="body">' +
                                 '            <div class="desc">' +
@@ -249,17 +249,14 @@
 
                         });
 
+
                     console.log(overlay);
                     overlay.setMap(map);
 
-                    // 아무데나 클릭하게되면 overlay를 끄기
-                    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-                        overlay.setMap(null)
-                        })
+                    function closeOverlay() {
+                        overlay.setMap(null);
+                    }
                     })
-
-
-
 
                 })(marker, facilityCoordinates[idx]);
 
