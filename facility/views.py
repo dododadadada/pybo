@@ -169,5 +169,3 @@ def detail(request, facility_id):
     facility = get_object_or_404(Facility, pk=facility_id)
     context = {'facility': facility}
     return render(request, 'facility/facility_detail.html', context)
-
-

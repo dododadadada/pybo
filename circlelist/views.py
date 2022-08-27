@@ -4,9 +4,6 @@ from .models import Circle, Category
 from django.core.paginator import Paginator
 from django.db.models import Q
 
-def index(request):
-    return render(request, 'circlelist/circle_main.html')
-
 
 def downloadCircle(request):
     filename = 'C:\Korea university\데이터톤\장고\동아리전체데이터.csv'
@@ -57,7 +54,10 @@ def circle_search(request):
     if b:
         circle_list = circle_list.filter(
             Q(name__icontains=b) |
-            Q(category__icontains=b)
+            Q(category__icontains=b) |
+            Q(tag__icontains=b) |
+            Q(content__icontains=b) |
+            Q(type__icontains=b)
         ).distinct()
 
     if f:
