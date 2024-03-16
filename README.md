@@ -21,13 +21,13 @@ MANAM
 * **고려대 동아리 지역연계 프로그램**
 ![image](https://github.com/dododadadada/manam/assets/98035735/b5862b28-d9dc-4865-8ae9-4ed38e05b416)
 
-* **KU만남**
+**1-1. KU만남**
 ![image](https://github.com/dododadadada/manam/assets/98035735/7879a040-060e-4833-8299-27ee19bb451a)
 
-* **고려대 동아리 모아보기**
+**1-2. 고려대 동아리 모아보기**
 ![image](https://github.com/dododadadada/manam/assets/98035735/aead181f-c7c5-4190-9851-515d82ca5502)
 
-* **커뮤니티**
+**1-3. 커뮤니티**
 ![image](https://github.com/dododadadada/manam/assets/98035735/d7de3272-dfe2-49ec-a89a-f42da4e0d3a5)
 ![image](https://github.com/dododadadada/manam/assets/98035735/bdc60173-672c-41cd-bb0e-83eeb2251dd6)
 
@@ -41,13 +41,13 @@ MANAM
 
 > **3. 성북구 문화시설**
 
-* **내 주변 문화시설 찾아보기**
+**3-1. 내 주변 문화시설 찾아보기**
 
 ![image](https://github.com/dododadadada/manam/assets/98035735/04269690-ac97-4a0a-9650-321cf3152f2a)
 
 ![image](https://github.com/dododadadada/manam/assets/98035735/b33ffee6-6da1-4998-984b-d29afee7a9e1)
 
-* **성북구 문화시설 목록**
+**3-2. 성북구 문화시설 목록**
 
 ![image](https://github.com/dododadadada/manam/assets/98035735/7c74a3bb-9e2e-4734-a7cf-21e68e36b5e1)
 ![image](https://github.com/dododadadada/manam/assets/98035735/715ac033-d749-4afd-8a8b-9a365dd80eba)
