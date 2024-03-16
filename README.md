@@ -7,7 +7,7 @@ MANAM: 성북구 문화 여가생활 플랫폼
 MANAM
 --------
 성북구 내 문화시설 및 프로그램 추천 플랫폼이자 성북구민과 고려대학교 동아리의 소통창구
-\
+
 * 성북구 내에 산발적으로 존재하였던 여가생활정보를 한 데 모아 사람들에게 편의를 제공
 * 대학 캠퍼스와 지역 사회가 연계되어 동반 성장한다는 사회적 가치 실현
 * 지역주민과 캠퍼스 구성원들이 소통하고 교류하며 함께하는 지역사회 형성
@@ -17,7 +17,7 @@ MANAM
 ![image](https://github.com/dododadadada/manam/assets/98035735/55efbde9-1c01-4d81-820d-15053ec25c83)
 
 
-**1. KU만남 & 커뮤니티**
+> **1. KU만남 & 커뮤니티**
 * **고려대 동아리 지역연계 프로그램**
 ![image](https://github.com/dododadadada/manam/assets/98035735/b5862b28-d9dc-4865-8ae9-4ed38e05b416)
 
@@ -32,14 +32,14 @@ MANAM
 ![image](https://github.com/dododadadada/manam/assets/98035735/bdc60173-672c-41cd-bb0e-83eeb2251dd6)
 
 
-**2. 성북구 문화프로그램**
+> **2. 성북구 문화프로그램**
 
 ![image](https://github.com/dododadadada/manam/assets/98035735/7be8d87f-013d-4a3d-8c12-9a203d885006)
 
 ![image](https://github.com/dododadadada/manam/assets/98035735/35e451b1-67a4-4411-9979-21d94db6bb56)
 
 
-**3. 성북구 문화시설**
+> **3. 성북구 문화시설**
 
 * **내 주변 문화시설 찾아보기**
 
